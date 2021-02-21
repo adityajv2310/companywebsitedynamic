@@ -1,0 +1,18 @@
+{% extends "dynamicwebsite/base1.html" %}
+
+{% block content %}
+    <div class="productcontent">    
+    <h1>Our Premium Products</h1>
+    <div class="productitems">
+        {% for products in products %}
+        <div class="productitem"> 
+            <div class="itemimage">
+            <img src="{{ products.photo.url }}" alt="Product Photo">
+            </div>
+            <div class="itemname">{{ products.itemname }}</div>
+            <div class="itemprice">{{ products.itemprice }} </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+{% endblock  %}
